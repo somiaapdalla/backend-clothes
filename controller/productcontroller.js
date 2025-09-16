@@ -19,6 +19,8 @@ const createProduct = async (req , res) => {
 }
 
 
+
+
 const readProduct = async(req ,res)=>{
     const {category} = req.body  || {}
     let filterdata = {}
@@ -75,5 +77,8 @@ const getalldocs = async (req,res)=>{
         res.send({getAlldoc})
     }
 }
+
+
+
 
 module.exports = {createProduct,readProduct,updateProduct,deleteProduct,readsingleProduct,getalldocs}

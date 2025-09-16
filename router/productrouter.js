@@ -14,4 +14,6 @@ router.put("/update/product/:id",uploadImage.single("img") , productcontroller.u
 router.delete("/delete/product/:id",uploadImage.single("img") , productcontroller.deleteProduct)
 
 
+
+
 module.exports = router
