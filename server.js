@@ -6,7 +6,8 @@ const customerrouter = require("./router/customerrouter")
 const orderrouter = require("./router/orderRouter")
 const adminrouter = require("./router/adminrouter")
 const contactrouter = require("./router/contactrouter")
-const clothesrouter = require("./router/outfitrouter")
+const ordersrouter = require("./router/ordersrouter")
+// const clothesrouter = require("./router/outfitrouter")
 
 const app = express()
 const cors = require("cors");
@@ -25,7 +26,8 @@ app.use(customerrouter)
 app.use(orderrouter)
 app.use(adminrouter)
 app.use(contactrouter)
-app.use(clothesrouter)
+app.use(ordersrouter)
+// app.use(clothesrouter)
 
 
 app.listen(PORT, ()=> console.log(`the server is running on port ${PORT}`))
