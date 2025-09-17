@@ -17,12 +17,19 @@ app.use(express.json())
 app.use("/allDocs", express.static("document")) //
 const PORT = process.env.port || 1000
 
-mongoose.connect(process.env.mongodb_url {
+
+
+mongoose.connect(process.env.MONGODB_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
 .then(() => console.log("✅ MongoDB connected"))
-.catch(err => console.error("❌ MongoDB connection error:", err));
+.catch(err => {
+  console.error("❌ MongoDB connection error:", err);
+  process.exit(1);
+});
+
+
 
 app.use(productrouter)
 app.use(customerrouter)
